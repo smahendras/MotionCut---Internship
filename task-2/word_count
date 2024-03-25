@@ -1,0 +1,7 @@
+s=input("Enter a string: ")
+strlist=s.split()
+print(len(strlist))
+
+
+s=len(input("Enter a string: ").split())
+print(s)
