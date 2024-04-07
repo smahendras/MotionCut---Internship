@@ -1,0 +1,30 @@
+import random
+
+uppercase_letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+lowercase_letters = uppercase_letters.lower()
+numbers = "0123456789"
+symbols = "`!@#$%^&*()_+<>:;{}[]*/?|/ "
+
+upper,lower,sym,num = True , True, True,True        # to include above things in password
+
+all = " "
+
+if upper:
+    all += uppercase_letters            #to include things in final password
+
+if lower:
+    all += lowercase_letters
+
+if sym:
+    all += symbols
+
+if num:
+    all += numbers
+
+length = 8                      # length of the password
+
+amount = 10                     # number of password you want to generate
+
+for x in range (amount):            #loop for the amount of passwords want to generate
+    password = " ".join(random.sample(all, length)) #to generate random password,(all)- to include string stored in it
+    print(password)
